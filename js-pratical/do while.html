@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do while</title>
+</head>
+
+<body>
+    <script>
+        let userInput;
+        do {
+            userInput = prompt("Please enter a number greater than 10:");
+            userInput = Number(userInput);
+        } while (isNaN(userInput) || userInput <= 10);
+
+        console.log("Thank you! You entered:", userInput);
+
+
+    </script>
+</body>
+
+</html>
