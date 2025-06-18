@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Day of the Week Checker</title>
+</head>
+
+<body>
+    <h2>What day is it?</h2>
+    <p>Enter a number between 1 and 7, and I'll tell you the day of the week:</p>
+
+    <input type="number" id="dayInput" min="1" max="7" placeholder="e.g., 1 for Monday">
+    <button onclick="checkDay()">Tell Me!</button>
+
+    <p id="result"></p>
+
+    <script>
+        function checkDay() {
+            const input = document.getElementById("dayInput").value;
+            const dayNumber = parseInt(input);
+            let message = "";
+
+            switch (dayNumber) {
+                case 1:
+                    message = "It's Monday — the start of the week. Let's do this!";
+                    break;
+                case 2:
+                    message = "Tuesday already! Hope your week is going well.";
+                    break;
+                case 3:
+                    message = "It's Wednesday — halfway to the weekend!";
+                    break;
+                case 4:
+                    message = "Thursday here! Almost there.";
+                    break;
+                case 5:
+                    message = "It's Friday! Time to get excited 🎉";
+                    break;
+                case 6:
+                    message = "Saturday! Time to relax or go on an adventure.";
+                    break;
+                case 7:
+                    message = "Sunday — a perfect day to recharge for the week ahead.";
+                    break;
+                default:
+                    message = "Hmm, that doesn't look right. Please enter a number between 1 and 7.";
+            }
+
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+</body>
+
+</html>
